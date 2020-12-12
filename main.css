@@ -1,0 +1,27 @@
+#submit{
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+#text{
+  padding: 10px;
+}
+#text:focus,
+#submit:focus{
+  outline: none;
+}
+p{
+  cursor: default;
+  font-family: 'Roboto', sans-serif;
+}
+div{
+  width: 50%;
+  margin: 100px auto;
+}
+h1{
+  font-family: 'Roboto', sans-serif;
+  cursor: default;
+}
