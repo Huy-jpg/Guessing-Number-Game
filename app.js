@@ -12,10 +12,7 @@ submitBtn.addEventListener('click', function(){
   
   if(guess === correctNum){
     message.textContent = `${text.value} is the correct answer. Good Job!`;
-    text.disabled = true;
-    message.style.color = "green";
-    text.style.color = 'green';
-    text.style.borderColor = 'green';
+    Gameover();
     playAgain();
 
 
@@ -29,9 +26,8 @@ submitBtn.addEventListener('click', function(){
     guessLeft -= 1;
 
       if (guessLeft === 0){
-        text.disabled = true;
+        Gameover();
         message.textContent = `Game Over! The correct answer was ${correctNum}`;
-        text.style.color = 'red';
         playAgain();
       } else{
         message.style.color = 'red';
@@ -42,6 +38,13 @@ submitBtn.addEventListener('click', function(){
           message.textContent = `Hmh, try a higer number. Guesses Left: ${guessLeft}`
         }
       }
+    }
+  function Gameover(color){
+    guess === correctNum ? color = 'green': color = 'red';
+    text.disabled = true;
+    message.style.color = color;
+    text.style.color = color;
+    text.style.borderColor = color;
   }
 });
 
